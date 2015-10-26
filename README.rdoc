@@ -1,0 +1,8 @@
+This repository includes the standard Ruby on Rails folders 
+for the Bouquet portion of Project Reservoir
+
+It also includes DBbackup.backup which contains the packup for the postgresql db.
+The default credentials are username: postgres and password: autom8
+
+To load it create a database and restore it to the backup file, 
+or right-click a db in pgadmin3 and choose "restore" and then the .backup
