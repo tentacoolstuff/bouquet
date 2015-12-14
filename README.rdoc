@@ -3,17 +3,22 @@ for the Bouquet portion of Project Reservoir
 
 
 It also includes DBbackup.backup which contains the packup for the postgresql db.
-The default credentials are username: postgres and password: autom8
 
+To set up this database, install postgresql and pgAdmin III.
+Define an admin user profile (reccommended username: postgres and password: autom8).
+Create a database named 'postgres'.
 To load it create a database and restore it to the backup file, 
-or right-click a db in pgadmin3 and choose "restore" and then the .backup
+Right-click the 'postgres' db in pgadmin3 and choose "Restore".
+A window will come up letting you choose DBbackup.backup , then restore.
 
 
-If the report tables of the db are empty, they can be filled using
-"numbergen.pl" which is also included. With Perl installed, just enter
-"perl numbergen.pl #" from the terminal, where # is the number of reports
-per dandelion you'd like to generate (recommended minimum is 50). 
+Sample data can be generated using 'numbergen.pl', to use it:
+Install perl, navigate to numbergen.pl in the terminal.
+If your login for your DBMS isn't 'postgres' with password 'autom8', change line 19
+	of the numbergen.pl script to match your credentials.
+Enter "perl numbergen.pl #" from the terminal, where # is the number of reports
+	per dandelion you'd like to generate (recommended minimum is 50). 
 
 Right now the moisture falls realistically, and a valve report is generated 
-when the moisture goes below its limit to demonstrate watering. 
+	when the moisture goes below its limit to demonstrate watering. 
 Other data to be simulated in later versions.
