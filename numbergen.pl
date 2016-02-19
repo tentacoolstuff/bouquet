@@ -3,7 +3,7 @@
 sub main {	
 	use DBI;
 	use Class::Struct;
-	struct( Report => [ m1 => '$',m2 => '$',m3 => '$',hum => '$',temp => '$',batteryLv => '$',
+	struct( Report => [ m1 => '$',m2 => '$',m3 => '$',hum => '$',t1 => '$',batteryLv => '$',
 		Reporttime => '$', dand => '$', state => '$']);
 
 	struct( vReport => [ valve => '@', vReporttime => '$', vstate => '$']);
@@ -27,19 +27,19 @@ sub main {
 	# create initial values
 	my $time = 'January ' . $d . ' ' . $h . ':' . $m . ':00 2015 EST';
 	my $rm = rand(0.6) +0.4;
-	$Reports[0] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,temp => 300,batteryLv => 99,
+	$Reports[0] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
 		Reporttime => $time, dand => 'e4590694-8275-4494-b486-f8cebfb85dad', state => '1' );
 	$rm = rand(0.6) +0.4;
-	$Reports[1] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,temp => 300,batteryLv => 99,
+	$Reports[1] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
 		Reporttime => $time, dand => 'b7ea29b3-c229-4f57-960d-ad1f673a5ee2', state => '1' );
 	$rm = rand(0.6) +0.4;
-	$Reports[2] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,temp => 300,batteryLv => 99,
+	$Reports[2] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
 		Reporttime => $time, dand => '983d3578-3178-42fb-964f-fd57af189242', state => '1' );
 	$rm = rand(0.6) +0.4;
-	$Reports[3] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,temp => 300,batteryLv => 99,
+	$Reports[3] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
 		Reporttime => $time, dand => 'f922478c-416c-43f2-ab00-68af13e18c5a', state => '1' );
 		$rm = rand(0.6) +0.4;
-	$Reports[4] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,temp => 300,batteryLv => 99,
+	$Reports[4] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
 		Reporttime => $time, dand => 'a58fdf58-697c-40c2-9666-8dc127a8679f', state => '1' );
 	
 	my $j=4;
@@ -58,7 +58,7 @@ sub main {
    		
    		$j = $j + 1;
    		($rm, $watersneeded) = dry($Reports[$j-5]->m1, 1);
-   		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,temp => 300,batteryLv => 99,
+   		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
 			Reporttime => $time, dand => 'e4590694-8275-4494-b486-f8cebfb85dad', state => '1' );
 		if ($watersneeded == 1){
 			($td, $th, $tm) = nextTime($d, $h, $m);
@@ -70,7 +70,7 @@ sub main {
 		
 		$j = $j + 1;
    		($rm, $watersneeded) = dry($Reports[$j-5]->m1, 1);
-   		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,temp => 300,batteryLv => 99,
+   		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
 			Reporttime => $time, dand => 'b7ea29b3-c229-4f57-960d-ad1f673a5ee2', state => '1' );
 		if ($watersneeded == 1){
 			($td, $th, $tm) = nextTime($d, $h, $m);
@@ -82,7 +82,7 @@ sub main {
 		
 		$j = $j + 1;
    		($rm, $watersneeded) = dry($Reports[$j-5]->m1, 2);
-   		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,temp => 300,batteryLv => 99,
+   		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
 			Reporttime => $time, dand => '983d3578-3178-42fb-964f-fd57af189242', state => '1' );
 		if ($watersneeded == 1){
 			($td, $th, $tm) = nextTime($d, $h, $m);
@@ -94,7 +94,7 @@ sub main {
 		
 		$j = $j + 1;
 		($rm, $watersneeded) = dry($Reports[$j-5]->m1, 2);
-   		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,temp => 300,batteryLv => 99,
+   		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
 			Reporttime => $time, dand => 'f922478c-416c-43f2-ab00-68af13e18c5a', state => '1' );
 		if ($watersneeded == 1){
 			($td, $th, $tm) = nextTime($d, $h, $m);
@@ -106,7 +106,7 @@ sub main {
 		
 		$j = $j + 1;
 		($rm, $watersneeded) = dry($Reports[$j-5]->m1, 2);
-   		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,temp => 300,batteryLv => 99,
+   		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
 			Reporttime => $time, dand => 'a58fdf58-697c-40c2-9666-8dc127a8679f', state => '1' );
 		if ($watersneeded == 1){
 			($td, $th, $tm) = nextTime($d, $h, $m);
@@ -120,9 +120,9 @@ sub main {
 	
 	my $sth;
 	for (my $k=0; $k <= $j; $k++) {
-		$sth = $dbh->prepare("INSERT INTO Reports(moisture1, moisture2, moisture3, humidity, temperature, batterylevel,
-			reporttime,dandelionid,stateid) VALUES(?,?,?,?,?,?,?,?,?)");
-		$sth->execute($Reports[$k]->m1, $Reports[$k]->m2, $Reports[$k]->m3, $Reports[$k]->hum, $Reports[$k]->temp, $Reports[$k]->batteryLv,
+		$sth = $dbh->prepare("INSERT INTO Reports(moisture1, moisture2, moisture3, humidity, temperature1, temperature2, temperature3, batterylevel,
+			reporttime,dandelionid,stateid) VALUES(?,?,?,?,?,?,?,?,?,?,?)");
+		$sth->execute($Reports[$k]->m1, $Reports[$k]->m2, $Reports[$k]->m3, $Reports[$k]->hum, $Reports[$k]->t1, $Reports[$k]->t1, $Reports[$k]->t1, $Reports[$k]->batteryLv,
 			$Reports[$k]->Reporttime, $Reports[$k]->dand, $Reports[$k]->state);
 	}
 	
@@ -133,6 +133,7 @@ sub main {
 	
 	# clean up
 	$dbh->disconnect();
+	print "Done.";
 }
 
 sub dry {

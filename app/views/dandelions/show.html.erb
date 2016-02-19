@@ -1,0 +1,40 @@
+<h1>Dandelions#show</h1>
+<p>UUID: <%= @dandelion.id %> <br>
+Nickname (label): <%= @dandelion.nickname %> <br>
+Latitude: <%= @dandelion.lati %> <br>
+Longitude: <%= @dandelion.longi %> <br>
+Altitude: <%= @dandelion.alti %> <br>
+Firmware Version: <%= @dandelion.vFirmware %> <br>
+Moisture Limit: <%= @dandelion.moistureLimit %> <br>
+Sunflower UUID: <%= @dandelion.sunflowerID %> <br>
+<table>
+	<tr>
+	<td>dandelionid</td>
+	<td>reporttime</td>
+	<td>moisture1</td>
+	<td>moisture2</td>
+	<td>moisture3</td>
+	<td>temperature1</td>
+	<td>temperature2</td>
+	<td>temperature3</td>
+	<td>humidity</td>
+	<td>batterylevel</td>
+	<td>stateid</td>
+	</tr>
+<% @reports.each do |report| %>
+  <tr>  
+	<td><%= report.dandelionid %></td>
+	<td><%= report.reporttime %></td>
+	<td><%= report.moisture1 %></td>
+	<td><%= report.moisture2 %></td>
+	<td><%= report.moisture3 %></td>
+	<td><%= report.temperature1 %></td>
+	<td><%= report.temperature2 %></td>
+	<td><%= report.temperature3 %></td>
+	<td><%= report.humidity %></td>
+	<td><%= report.batterylevel %></td>
+	<td><%= report.stateid %></td>
+  </tr>
+  <% end %>
+  </table>
+</p>
