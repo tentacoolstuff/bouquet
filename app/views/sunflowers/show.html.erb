@@ -1,0 +1,66 @@
+<h1>Sunflowers#show</h1>
+<%= @reports[1].reporttime %>
+
+<p>UUID: <%= @sunflower.id %> <br>
+Nickname (label): <%= @sunflower.nickname %> <br>
+Firmware Version: <%= @sunflower.vFirmware %> <br>
+
+<h1>Dandelions of this Sunflower</h1>
+<table>
+	<tr>
+	<td>dandelionid</td>
+	<td>nickname</td>
+	<td>vFirmware</td>
+	<td>lati</td>
+	<td>longi</td>
+	<td>alti</td>
+	<td>moistureLimit</td>
+	</tr>
+<% @dandelions.each do |dandelion| %>
+  <tr>  
+	<td><%= dandelion.id %></td>
+	<td><%= dandelion.nickname %></td>
+	<td><%= dandelion.vFirmware %></td>
+	<td><%= dandelion.lati %></td>
+	<td><%= dandelion.longi %></td>
+	<td><%= dandelion.alti %></td>
+	<td><%= dandelion.moistureLimit %></td>
+  </tr>
+  <% end %>
+  </table>
+
+<h1>Last Reports</h1>
+<table>
+	<tr>
+	<td>dandelionid</td>
+	<td>reporttime</td>
+	<td>moisture1</td>
+	<td>moisture2</td>
+	<td>moisture3</td>
+	<td>temperature1</td>
+	<td>temperature2</td>
+	<td>temperature3</td>
+	<td>humidity</td>
+	<td>batterylevel</td>
+	<td>stateid</td>
+	</tr>
+<% @reports.each do |report| %>
+  <tr>  
+	<td><%= report.dandelionid %></td>
+	<td><%= report.reporttime %></td>
+	<td><%= report.moisture1 %></td>
+	<td><%= report.moisture2 %></td>
+	<td><%= report.moisture3 %></td>
+	<td><%= report.temperature1 %></td>
+	<td><%= report.temperature2 %></td>
+	<td><%= report.temperature3 %></td>
+	<td><%= report.humidity %></td>
+	<td><%= report.batterylevel %></td>
+	<td><%= report.stateid %></td>
+  </tr>
+  <% end %>
+  </table>
+  <br>
+  Accessing specific data:<br>
+  <%= @reports[0].reporttime %>
+</p>

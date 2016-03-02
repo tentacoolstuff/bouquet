@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
-  resources :dandelions
+  get 'sunflowers/show'
+
+
   get 'dandelions/show'
 
   # The priority is based upon order of creation: first created -> highest priority.
