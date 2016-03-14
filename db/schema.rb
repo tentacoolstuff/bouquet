@@ -17,66 +17,9 @@ ActiveRecord::Schema.define(version: 20160217160347) do
   enable_extension "plpgsql"
   enable_extension "adminpack"
 
-  create_table "dandelion_statuses", force: true do |t|
-    t.text "description"
-  end
-
-  create_table "dandelions", id: :uuid, force: true do |t|
-    t.float   "lati"
-    t.float   "longi"
-    t.float   "alti"
-    t.float   "vFirmware"
-    t.integer "n_reports"
-    t.string  "nickname",      limit: 1, array: true
-    t.float   "moistureLimit"
-    t.uuid    "sunflowerID"
-  end
-
-  add_index "dandelions", ["sunflowerID"], name: "fki_sunflower", using: :btree
-
   create_table "peepers", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "reports", force: true do |t|
-    t.float    "moisture1"
-    t.float    "moisture2"
-    t.float    "moisture3"
-    t.float    "humidity"
-    t.integer  "temperature"
-    t.float    "batterylevel"
-    t.datetime "reporttime"
-    t.uuid     "dandelionid"
-    t.integer  "stateid",      default: "nextval('"reports_stateID_seq"'::regclass)", null: false
-  end
-
-  add_index "reports", ["stateid"], name: "fki_stateID", using: :btree
-
-  create_table "sunflowers", id: :uuid, force: true do |t|
-    t.string  "fieldID",   limit: 1, array: true
-    t.float   "vFirmware"
-    t.string  "ip",        limit: 1, array: true
-    t.macaddr "MAC"
-    t.string  "nickname",  limit: 1, array: true
-  end
-
-  create_table "valve_reports", force: true do |t|
-    t.string   "valveid",       limit: 1,                                                                                array: true
-    t.datetime "reporttime"
-    t.integer  "valvestatusid",           default: "nextval('"valveReports_valveStatusID_seq"'::regclass)", null: false
-  end
-
-  add_index "valve_reports", ["valvestatusid"], name: "fki_statusID", using: :btree
-
-  create_table "valve_statuses", force: true do |t|
-    t.text "description"
-  end
-
-  create_table "valves", force: true do |t|
-    t.uuid   "sunflowerID"
-    t.string "microbasin",  limit: nil
-    t.string "nickname",    limit: 1,   array: true
   end
 
 end

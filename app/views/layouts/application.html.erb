@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Reservoir</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'defaults', 'data-turbolinks-track' => true %>
+  <title>Bouquet</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body  id="page-body">
+<%= render "shared/menu" %>
+<%= render "shared/map" %>
 
-<%= yield %>
+<!-- data side -->
+<section class="data-wrapper right"> 		
+	<div class="data-content content-wrapper">
+		<!-- header -->
+		<div class="data-content-header" id="all-sensor">
+			<h2>Sensor Data Sheet</h2>
+			<div class="content-divider"></div>
+			<ul class="data-toggle">
+				<li id="toggle-list" class="opacityUp"><img src="/assets/list.svg"></li>
+				<li id="toggle-grid"><img src="/assets/grid.svg"></li>
+			</ul>
+		</div>
+		<div class="dandelion-data list-view" id="dandelion-view">
+			<%= yield %>
+		</div>
+	</div>
+</section>
 
+
+<div class="clearfix"></div>
 </body>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
+
+        
+
 </html>
+ 

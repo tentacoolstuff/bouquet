@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
   
+  resources :dandelions
+
   get 'sunflowers/show'
+  get 'sunflowers/' => 'sunflowers#index'
+  get 'sunflowers/index' => 'sunflowers#index'
 
 
-  get 'dandelions/show'
+  get 'dandelions/show' => 'dandelions#show'
+  get 'dandelions/' => 'dandelions#index'
+  get 'dandelions/index' => 'dandelions#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

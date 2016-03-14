@@ -1,4 +1,8 @@
 class SunflowersController < ApplicationController
+  def index
+  	@sunflowers = Sunflower.all
+  end
+
   def show
     @sunflower = Sunflower.find('24f7b3b3-4782-4f40-b849-2262fc56608d')
 	@dandelions = Dandelion.where(sunflowerID: '24f7b3b3-4782-4f40-b849-2262fc56608d')

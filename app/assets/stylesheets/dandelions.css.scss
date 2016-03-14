@@ -1,3 +1,25 @@
 // Place all the styles related to the dandelions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body .data-wrapper .content-wrapper {
+    margin-left: 70px;
+}
+
+a{
+	color :white;
+}
+
+.return{
+	position: absolute;
+    top: 45px;
+    left: 40px;
+    z-index: 100;
+    img{
+    	width: 24px;
+    }
+}
+
+#indiv-sensor{
+	margin-left: 20px;
+}
