@@ -34,9 +34,6 @@ ready = ->
 		$('#toggle-grid').removeClass('opacityUp')
 	
 	initViz(id[0],num)
-	# initMois(num)
-	
-
 
 
 $(document).ready(ready)

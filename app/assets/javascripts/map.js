@@ -4,17 +4,18 @@ var marker;
 var infoArray = new Array();
 var z;
 var id;
-
-
+var infowindow;
 
 function initMap() {
 	var mapDiv = document.getElementById('map');
   url = window.location.href;
-  id = url.split('/').reverse();
+  idArray = url.split('/').reverse();
+  id = idArray[0];
 
 	map = new google.maps.Map(mapDiv, {
   		center: {lat: 36.8689, lng: -119.7044},
-  		zoom: 16
+  		zoom: 17,
+      mapTypeId: google.maps.MapTypeId.HYBRID
 	});
 
   $.ajax({
@@ -22,19 +23,19 @@ function initMap() {
     dataType: "json",
     url: "/dandelions",
     success: function(data){
-      //loadMarkers(data);
       console.log(data)
-      if (id[0].length >=30){
-        loadMarker(data[0],0);
+      if (id.length >=30){
+        for (var j = 0; j<data.length; j++){
+          if(id.indexOf(data[j].id)==0){
+            loadMarker(data[j],j+1);
+            break;
+          }
+        }
       }
       else{
         loadMarkers(data);
       }
     }
-
-
-      
-
   });
 }
 
@@ -49,11 +50,14 @@ function loadMarkers(data){
   }
 }
 
+//individual marker
 function loadMarker(data,z){
     var latLng = new google.maps.LatLng(data.lati,data.longi);
     createMarker(latLng,map,'title');
     popup = "Dandelion " + z;
     attachMessage(marker, popup);
+    showMessage(marker, popup);
+
 }
 
 function createMarker(coords,map,title){
@@ -65,7 +69,7 @@ function createMarker(coords,map,title){
 }
 
 function attachMessage(marker, info) {
-  var infowindow = new google.maps.InfoWindow({
+  infowindow = new google.maps.InfoWindow({
     content: info
   });
 
