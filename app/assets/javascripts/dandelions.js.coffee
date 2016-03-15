@@ -32,7 +32,14 @@ ready = ->
 		$('#dandelion-view').removeClass('grid-view').addClass('list-view')
 		$(this).addClass('opacityUp')
 		$('#toggle-grid').removeClass('opacityUp')
-	
+
+	#show markers on hover 
+
+	$('.dandelion-listing-item').hover( 
+		-> console.log('hovered')
+		)	
+
+
 	initViz(id[0],num)
 
 
