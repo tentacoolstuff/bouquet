@@ -1,0 +1,60 @@
+{
+  "name": "heatmap.js",
+  "version": "2.0.2",
+  "description": "Dynamic JavaScript Heatmaps for the Web",
+  "homepage": "http://www.patrick-wied.at/static/heatmapjs/",
+  "main": "heatmap.min.js",
+  "devDependencies": {
+    "grunt": ">= 0.4.1",
+    "coffee-script": ">= 1.6.3",
+    "grunt-contrib-uglify": ">= 0.2.0",
+    "grunt-contrib-concat": ">= 0.1.3",
+    "grunt-contrib-watch": "0.2.0rc7",
+    "grunt-contrib-jshint": ">= 0.3.0",
+    "grunt-contrib-copy": ">= 0.7.0",
+    "grunt-shell": "^0.7.0"
+  },
+  "keywords": [
+    "heatmap",
+    "heatmaps",
+    "heat map",
+    "heat maps",
+    "googlemaps heatmap",
+    "leaflet heatmap",
+    "leaflet"
+  ],
+  "buildFiles": [
+    "src/config.js",
+    "src/data.js",
+    "src/renderer/canvas2d.js",
+    "src/renderer.js",
+    "src/util.js",
+    "src/core.js"
+  ],
+  "_id": "heatmap.js@2.0.2",
+  "scripts": {},
+  "_shasum": "9808282b61a40011d6bbe1010c06536eb458ae3b",
+  "_from": "heatmap.js@*",
+  "_npmVersion": "2.14.12",
+  "_nodeVersion": "4.2.6",
+  "_npmUser": {
+    "name": "pa7",
+    "email": "contact@patrick-wied.at"
+  },
+  "dist": {
+    "shasum": "9808282b61a40011d6bbe1010c06536eb458ae3b",
+    "tarball": "http://registry.npmjs.org/heatmap.js/-/heatmap.js-2.0.2.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "pa7",
+      "email": "contact@patrick-wied.at"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-9-west.internal.npmjs.com",
+    "tmp": "tmp/heatmap.js-2.0.2.tgz_1454622069976_0.4308609094005078"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/heatmap.js/-/heatmap.js-2.0.2.tgz"
+}

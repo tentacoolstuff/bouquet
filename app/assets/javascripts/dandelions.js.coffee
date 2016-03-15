@@ -37,8 +37,17 @@ ready = ->
 
 	$('.dandelion-listing-item').hover( 
 		-> console.log('hovered')
-		)	
+		)
 
+	$('.data-nav-li').on 'click', ->
+		$('.data-nav-li	').removeClass('active')
+		$(this).addClass('active')
+		if $(this).hasClass('menu-heatmap')
+			showHeatMap()
+			hideMarkers()
+		else
+			hideHeatMap()
+			showMarkers()
 
 	initViz(id[0],num)
 
