@@ -13,14 +13,6 @@
 			<p><%= @dandelion.alti %>m</p>
 			<h4>Altitude</h4>
 		</li>
-		<li class="longtitude">
-			<p><%= @dandelion.longi %></p>
-			<h4>Longitude</h4>
-		</li>
-		<li class="latitude">
-			<p><%= @dandelion.lati %> </p>
-			<h4>Latitude</h4>
-		</li>
 		<li class="firmware-version">
 			<p><%= @dandelion.vFirmware %> </p>
 			<h4>Firmware Ver.</h4>
@@ -28,6 +20,14 @@
 		<li class="moisture-limit">
 			<p><%= @dandelion.moistureLimit %> </p>
 			<h4>Mois. Limit</h4>
+		</li>
+		<li class="longtitude">
+			<p><%= @dandelion.longi %></p>
+			<h4>Longitude</h4>
+		</li>
+		<li class="latitude">
+			<p><%= @dandelion.lati %> </p>
+			<h4>Latitude</h4>
 		</li>
 	</ul>	
 	<div class="moisture-trend">
@@ -39,62 +39,7 @@
 			<li><div class="legend-circle"></div><p>Level 3</p></li>
 		</ul>
 
-		<div class="moisture-table">
-			<div class="table-row">
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-			</div>
-			<div class="table-row">
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-			</div>
-			<div class="table-row">
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-				<div class="table-cell"><div class="cell-color"></div></div>
-			</div>
-			
+		<div class="moisture-table" id="moisTable">
 		</div>			
 	</div>
 	<div class="humidity-trend">
@@ -112,46 +57,3 @@
 
 	</div>
 </div>
-
-
-<p>UUID: <%= @dandelion.id %> <br>
-Nickname (label): <%= @dandelion.nickname %> <br>
-Latitude: <%= @dandelion.lati %> <br>
-Longitude: <%= @dandelion.longi %> <br>
-Altitude: <%= @dandelion.alti %> <br>
-Firmware Version: <%= @dandelion.vFirmware %> <br>
-Moisture Limit: <%= @dandelion.moistureLimit %> <br>
-Sunflower UUID: <%= @dandelion.sunflowerID %> <br>
-<table>
-	<tr>
-	<td>dandelionid</td>
-	<td>reporttime</td>
-	<td>moisture1</td>
-	<td>moisture2</td>
-	<td>moisture3</td>
-	<td>temperature1</td>
-	<td>temperature2</td>
-	<td>temperature3</td>
-	<td>humidity</td>
-	<td>batterylevel</td>
-	<td>stateid</td>
-	</tr>
-<% @reports.each do |report| %>
-  <tr>  
-	<td><%= report.dandelionid %></td>
-	<td><%= report.reporttime %></td>
-	<td><%= report.moisture1 %></td>
-	<td><%= report.moisture2 %></td>
-	<td><%= report.moisture3 %></td>
-	<td><%= report.temperature1 %></td>
-	<td><%= report.temperature2 %></td>
-	<td><%= report.temperature3 %></td>
-	<td><%= report.humidity %></td>
-	<td><%= report.batterylevel %></td>
-	<td><%= report.stateid %></td>
-  </tr>
-  <% end %>
-  </table>
-  
-  <%= @reports[0].reporttime %>
-</p>

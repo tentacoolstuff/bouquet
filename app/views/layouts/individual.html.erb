@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bouquet</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body  id="page-body">
+<%= render "shared/menu" %>
+<%= render "shared/map" %>
+
+<section class="data-wrapper right"> 		
+	<div class="data-content">
+		<div class="content-wrapper">
+			<!-- indiv header -->
+			<div class="data-content-header" id="indiv-sensor">
+				<h2>Sensor: Dandelion <span><% @dandelion.nickname %></span></h2>
+				<div class="content-divider"></div>
+				<ul class="data-toggle">
+  					<li id="toggle-daily" class="active">Daily</li>
+  					<li id="toggle-weekly">Weekly</li>
+  					<li id="toggle-monthly">Monthly</li>
+				</ul>
+			</div>
+				<!-- <div class="return">Back</div> -->
+
+			<%= link_to image_tag("chevron-left.svg", :border=>0), {:controller => 'dandelions'}, {:class => 'return'} %>
+
+
+			<%= yield %>
+		</div>
+	</div>
+</section>
+
+
+<div class="clearfix"></div>
+</body>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+
+</html>

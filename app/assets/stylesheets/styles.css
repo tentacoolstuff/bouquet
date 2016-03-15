@@ -1,0 +1,724 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,300,100,300italic');
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800');
+::selection {
+  background: #5f68f3;
+  color: #ffffff;
+}
+::-moz-selection {
+  background: #5f68f3;
+  color: #ffffff;
+}
+::-o-selection {
+  background: #5f68f3;
+  color: #ffffff;
+}
+::-ms-selection {
+  background: #5f68f3;
+  color: #ffffff;
+}
+::-webkit-selection {
+  background: #5f68f3;
+  color: #ffffff;
+}
+ol,
+ul {
+  list-style: none;
+}
+*,
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  outline: none;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible !important;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  height: auto;
+}
+textarea {
+  -webkit-resize: none !important;
+  -moz-resize: none !important;
+  -ms-resize: none !important;
+  -o-resize: none !important;
+  resize: none !important;
+}
+a,
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+input[type='text'],
+textarea {
+  cursor: text;
+}
+div,
+p,
+h1,
+h2,
+h3,
+span,
+li,
+ul {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+}
+body .content-wrapper {
+  width: 86.5%;
+  margin: 45px auto 0px;
+  display: block;
+}
+body .map-wrapper {
+  width: 41%;
+  height: 100vh;
+  display: inline-block;
+}
+body ul.data-nav {
+  background: #5797E3;
+  width: 82px;
+  height: auto;
+  position: absolute;
+  margin-left: -60px;
+  left: 41%;
+  z-index: 100;
+  color: white;
+}
+body ul.data-nav li {
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+  padding: 21px 0px;
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease 0s;
+  -moz-transition: all 0.25s ease 0s;
+  -o-transition: all 0.25s ease 0s;
+  -ms-transition: all 0.25s ease 0s;
+  transition: all 0.25s ease 0s;
+}
+body ul.data-nav li img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 8px;
+  opacity: 0.7;
+}
+body ul.data-nav li h3 {
+  font-weight: 800;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+body ul.data-nav li:hover {
+  -webkit-transition: all 0.25s ease 0s;
+  -moz-transition: all 0.25s ease 0s;
+  -o-transition: all 0.25s ease 0s;
+  -ms-transition: all 0.25s ease 0s;
+  transition: all 0.25s ease 0s;
+  background: #3774BD;
+}
+body ul.data-nav li:hover img {
+  opacity: 1;
+}
+body ul.data-nav .active {
+  background: #3774BD;
+}
+body ul.data-nav .active img {
+  opacity: 1;
+}
+body .data-wrapper {
+  width: 59%;
+  background: #282828;
+  height: 100vh;
+  display: inline-block;
+  color: #FFFFFF;
+  position: absolute;
+  right: 0;
+  padding-left: 0px;
+  overflow-y: scroll;
+}
+body .data-wrapper .content-wrapper {
+  margin-left: 60px;
+}
+body .data-wrapper .data-content .data-content-header {
+  display: block;
+  position: relative;
+}
+body .data-wrapper .data-content .data-content-header h2 {
+  color: white;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+body .data-wrapper .data-content .data-content-header ul.data-toggle {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+body .data-wrapper .data-content .data-content-header ul.data-toggle li {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  cursor: pointer;
+  opacity: 0.2;
+  -webkit-transition: all 0.25s ease 0s;
+  -moz-transition: all 0.25s ease 0s;
+  -o-transition: all 0.25s ease 0s;
+  -ms-transition: all 0.25s ease 0s;
+  transition: all 0.25s ease 0s;
+}
+body .data-wrapper .data-content .data-content-header ul.data-toggle li img {
+  width: 100%;
+}
+body .data-wrapper .data-content .data-content-header ul.data-toggle li:hover {
+  opacity: 0.8;
+  -webkit-transition: all 0.25s ease 0s;
+  -moz-transition: all 0.25s ease 0s;
+  -o-transition: all 0.25s ease 0s;
+  -ms-transition: all 0.25s ease 0s;
+  transition: all 0.25s ease 0s;
+}
+body .data-wrapper .data-content .data-content-header .content-divider {
+  width: 40px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.72);
+  margin: 20px 0px 30px;
+}
+body .data-wrapper .data-content .dandelion-data {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 42px;
+}
+body .data-wrapper .data-content .dandelion-data ul.dandelion-listing {
+  width: inherit;
+  display: inherit;
+  position: inherit;
+  margin: 0 auto;
+}
+body .data-wrapper .data-content .dandelion-data ul.dandelion-listing li.dandelion-listing-item {
+  border-radius: 1px;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid rgba(150, 150, 150, 0.3);
+  margin: 5px;
+  margin-left: 0px;
+  padding: 18px 24px 8px;
+}
+body .data-wrapper .data-content .dandelion-data ul.dandelion-listing li.dandelion-listing-item:hover {
+  border: 1px solid #5797E3;
+  background-color: rgba(255, 255, 255, 0.04);
+  -webkit-transition: all 0.25s ease 0s;
+  -moz-transition: all 0.25s ease 0s;
+  -o-transition: all 0.25s ease 0s;
+  -ms-transition: all 0.25s ease 0s;
+  transition: all 0.25s ease 0s;
+}
+body .data-wrapper .data-content .dandelion-data ul.dandelion-listing li.dandelion-listing-item ul h3 {
+  display: block;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  font-size: 10px;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+body .data-wrapper .data-content .dandelion-data ul.dandelion-listing li.dandelion-listing-item ul h3 span {
+  color: #5797E3;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 5px;
+  vertical-align: initial;
+  margin-right: 5px;
+}
+body .data-wrapper .data-content .dandelion-data ul.dandelion-listing li.dandelion-listing-item ul li p {
+  font-size: 16px;
+  margin-right: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: 'Lato', sans-serif;
+}
+body .data-wrapper .data-content .dandelion-data ul.dandelion-listing li.dandelion-listing-item ul li p span {
+  display: block;
+  font-size: 8px;
+  color: rgba(255, 255, 255, 0.6);
+}
+body .data-wrapper .data-content .dandelion-data ul.dandelion-listing li.dandelion-listing-item ul li h4 {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 800;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+body .data-wrapper .data-content .dandelion-data ul.dandelion-listing li.dandelion-listing-item ul li.multiple-list {
+  text-align: left;
+}
+body .data-wrapper .data-content .dandelion-data ul.dandelion-listing li.dandelion-listing-item ul li.multiple-list p {
+  font-size: 16px;
+  margin-right: 5px;
+}
+body .data-wrapper .data-content .grid-view ul.list-view-header {
+  display: none;
+}
+body .data-wrapper .data-content .grid-view ul.dandelion-listing li.dandelion-listing-item {
+  border: 1px solid rgba(150, 150, 150, 0.3);
+  width: 41%;
+  margin: 5px;
+  margin-left: 0px;
+  padding: 18px 24px 8px;
+}
+body .data-wrapper .data-content .grid-view ul.dandelion-listing li.dandelion-listing-item ul h3 {
+  margin-bottom: 17px;
+}
+body .data-wrapper .data-content .grid-view ul.dandelion-listing li.dandelion-listing-item ul li {
+  display: inline-block;
+  width: 21%;
+  text-align: center;
+  margin-right: 15%;
+  margin-bottom: 22px;
+  min-width: 60px;
+}
+body .data-wrapper .data-content .grid-view ul.dandelion-listing li.dandelion-listing-item ul li p {
+  display: inline-block;
+  margin-right: 10px;
+}
+body .data-wrapper .data-content .grid-view ul.dandelion-listing li.dandelion-listing-item ul li h4 {
+  margin-top: 3px;
+}
+body .data-wrapper .data-content .grid-view ul.dandelion-listing li.dandelion-listing-item ul li.multiple-list {
+  margin-right: 0px;
+  width: 55%;
+}
+body .data-wrapper .data-content .grid-view ul.dandelion-listing li.dandelion-listing-item ul li.multiple-list p {
+  margin-right: 22px;
+}
+body .data-wrapper .data-content .grid-view ul.dandelion-listing li.dandelion-listing-item ul li.multiple-list p:nth-child(3) {
+  margin-right: 0px;
+}
+body .data-wrapper .data-content .list-view ul.list-view-header {
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+}
+body .data-wrapper .data-content .list-view ul.list-view-header li {
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 10px;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: top;
+}
+body .data-wrapper .data-content .list-view ul.list-view-header li:last-child {
+  margin-right: 0px;
+}
+body .data-wrapper .data-content .list-view ul.list-view-header li span {
+  display: inline-block;
+  font-size: 8px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-right: 12px;
+  margin-top: 3px;
+  width: 35px;
+}
+body .data-wrapper .data-content .list-view ul.list-view-header li span:last-child {
+  margin-right: 0px;
+}
+body .data-wrapper .data-content .list-view ul.list-view-header .header-sensor {
+  width: 15%;
+}
+body .data-wrapper .data-content .list-view ul.list-view-header .header-air-temp {
+  width: 14%;
+}
+body .data-wrapper .data-content .list-view ul.list-view-header .header-soil-temp {
+  width: 22%;
+}
+body .data-wrapper .data-content .list-view ul.list-view-header .header-humidity {
+  width: 14%;
+}
+body .data-wrapper .data-content .list-view ul.list-view-header .header-moisture {
+  width: 22%;
+}
+body .data-wrapper .data-content .list-view ul.dandelion-listing li.dandelion-listing-item {
+  display: block;
+  padding-left: 17px;
+  margin-left: -17px;
+  padding-top: 20px;
+  padding-bottom: 24px;
+  padding-right: 0px;
+}
+body .data-wrapper .data-content .list-view ul.dandelion-listing li.dandelion-listing-item ul {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 0;
+  width: 100%;
+}
+body .data-wrapper .data-content .list-view ul.dandelion-listing li.dandelion-listing-item ul h3 {
+  width: 15%;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: sub;
+}
+body .data-wrapper .data-content .list-view ul.dandelion-listing li.dandelion-listing-item ul h3 span {
+  display: block;
+  margin-left: 0;
+}
+body .data-wrapper .data-content .list-view ul.dandelion-listing li.dandelion-listing-item ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+body .data-wrapper .data-content .list-view ul.dandelion-listing li.dandelion-listing-item ul li p {
+  display: inherit;
+}
+body .data-wrapper .data-content .list-view ul.dandelion-listing li.dandelion-listing-item ul li p span {
+  display: none;
+}
+body .data-wrapper .data-content .list-view ul.dandelion-listing li.dandelion-listing-item ul li h4 {
+  display: none;
+}
+body .data-wrapper .data-content .list-view ul.dandelion-listing li.dandelion-listing-item ul li:last-child {
+  margin-right: 0px;
+}
+body .data-wrapper .data-content .list-view ul.dandelion-listing li.dandelion-listing-item ul li.multiple-list p {
+  min-width: 35px;
+}
+body .data-wrapper .data-content .list-view ul.dandelion-listing li.dandelion-listing-item ul .air-temp {
+  width: 14%;
+}
+body .data-wrapper .data-content .list-view ul.dandelion-listing li.dandelion-listing-item ul .soil-temp {
+  width: 22%;
+  min-width: 145px;
+}
+body .data-wrapper .data-content .list-view ul.dandelion-listing li.dandelion-listing-item ul .humidity {
+  width: 14%;
+}
+body .data-wrapper .data-content .list-view ul.dandelion-listing li.dandelion-listing-item ul .moisture {
+  width: 22%;
+  min-width: 145px;
+}
+body .data-wrapper .data-content .indiv-sensor-data h3 {
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+body .data-wrapper .data-content .indiv-sensor-data h4 {
+  width: auto;
+  display: inline-block;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 8px;
+  font-weight: 500;
+}
+body .data-wrapper .data-content .indiv-sensor-data ul.device-metadata {
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(150, 150, 150, 0.2);
+  border-radius: 1px;
+  margin: 5px 0px;
+  padding: 17px;
+  padding-right: 0px;
+  margin-left: -17px;
+}
+body .data-wrapper .data-content .indiv-sensor-data ul.device-metadata:hover {
+  border: 1px solid #5797E3;
+  background-color: rgba(255, 255, 255, 0.04);
+  -webkit-transition: all 0.25s ease 0s;
+  -moz-transition: all 0.25s ease 0s;
+  -o-transition: all 0.25s ease 0s;
+  -ms-transition: all 0.25s ease 0s;
+  transition: all 0.25s ease 0s;
+}
+body .data-wrapper .data-content .indiv-sensor-data ul.device-metadata h3 {
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+body .data-wrapper .data-content .indiv-sensor-data ul.device-metadata li {
+  display: inline-block;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 45px;
+}
+body .data-wrapper .data-content .indiv-sensor-data ul.device-metadata li:last-child {
+  margin-right: 0px;
+}
+body .data-wrapper .data-content .indiv-sensor-data ul.device-metadata li img {
+  width: 55%;
+  margin: 0 auto;
+  margin-top: 10px;
+  vertical-align: sub;
+  margin-left: 23px;
+  margin-right: -20px;
+}
+body .data-wrapper .data-content .indiv-sensor-data ul.device-metadata li p {
+  color: #5797E3;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'lato', sans-serif;
+}
+body .data-wrapper .data-content .indiv-sensor-data ul.device-metadata li h4 {
+  width: auto;
+  display: inline-block;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 8px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+body .data-wrapper .data-content .indiv-sensor-data .moisture-trend {
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(150, 150, 150, 0.2);
+  border-radius: 1px;
+  margin: 5px 0px;
+  padding: 17px;
+  padding-right: 0px;
+  margin-left: -17px;
+  position: relative;
+}
+body .data-wrapper .data-content .indiv-sensor-data .moisture-trend ul.legend {
+  display: inline-block;
+  width: auto;
+  position: absolute;
+  right: 0px;
+  margin-right: 30px;
+}
+body .data-wrapper .data-content .indiv-sensor-data .moisture-trend ul.legend li {
+  display: inline-block;
+  margin-left: 10px;
+  width: auto;
+}
+body .data-wrapper .data-content .indiv-sensor-data .moisture-trend ul.legend li p {
+  display: inline-block;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 8px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+body .data-wrapper .data-content .indiv-sensor-data .moisture-trend ul.legend li .legend-circle {
+  width: 8px;
+  height: 8px;
+  margin-right: 5px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #5488C9;
+}
+body .data-wrapper .data-content .indiv-sensor-data .moisture-trend .moisture-table {
+  width: 95%;
+  display: table;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+body .data-wrapper .data-content .indiv-sensor-data .moisture-trend .moisture-table .table-row {
+  display: table-row;
+  width: 100%;
+  border-top: 1px solid rgba(150, 150, 150, 0.1);
+}
+body .data-wrapper .data-content .indiv-sensor-data .moisture-trend .moisture-table .table-row .table-cell {
+  display: table-cell;
+  width: 5.5%;
+  border-right: 1px solid rgba(150, 150, 150, 0.1);
+  border-top: 1px solid rgba(150, 150, 150, 0.1);
+}
+body .data-wrapper .data-content .indiv-sensor-data .moisture-trend .moisture-table .table-row .table-cell .cell-color {
+  background-color: #5488C9;
+  width: 90%;
+  height: 33px;
+  border-radius: 3px;
+  margin: 0 auto;
+  margin-left: 2px;
+  margin-top: 2px;
+}
+body .data-wrapper .data-content .indiv-sensor-data .humidity-trend {
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(150, 150, 150, 0.2);
+  border-radius: 1px;
+  margin: 5px 0px;
+  padding: 17px;
+  padding-right: 0px;
+  margin-left: -17px;
+  position: relative;
+}
+body .data-wrapper .data-content .indiv-sensor-data .humidity-trend #humidity-chart {
+  width: 100%;
+  height: 200px;
+}
+body .data-wrapper .data-content .indiv-sensor-data .soil-temp-trend {
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(150, 150, 150, 0.2);
+  border-radius: 1px;
+  margin: 5px 0px;
+  padding: 17px;
+  padding-right: 0px;
+  margin-left: -17px;
+  position: relative;
+}
+body .data-wrapper .data-content .indiv-sensor-data .soil-temp-trend #soil-temp-chart {
+  width: 100%;
+  height: 200px;
+}
+#all-sensor {
+  display: block;
+}
+#indiv-sensor {
+  display: block;
+}
+#indiv-sensor h2 {
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+#indiv-sensor h2 span {
+  color: #5797E3;
+  font-size: 14px;
+  font-weight: 700;
+}
+#indiv-sensor ul.data-toggle li {
+  width: auto;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  font-size: 10px;
+  text-transform: uppercase;
+  opacity: 0.3;
+}
+#indiv-sensor ul.data-toggle li:hover {
+  opacity: 1;
+  -webkit-transition: all 0.25s ease 0s;
+  -moz-transition: all 0.25s ease 0s;
+  -o-transition: all 0.25s ease 0s;
+  -ms-transition: all 0.25s ease 0s;
+  transition: all 0.25s ease 0s;
+}
+#indiv-sensor ul.data-toggle .active {
+  opacity: 1;
+}
+.a {
+  color: white;
+}
+.clearfix {
+  clear: both;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.opacityUp {
+  opacity: 0.7 !important;
+}
+.no-box-shadow {
+  -webkit-box-shadow: 0px 0px 32px 10px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0px 0px 32px 10px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 32px 10px rgba(0, 0, 0, 0);
+}
+.box-shadow {
+  -webkit-box-shadow: 0px 0px 32px 10px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: 0px 0px 32px 10px rgba(0, 0, 0, 0.18);
+  box-shadow: 0px 0px 32px 10px rgba(0, 0, 0, 0.18);
+}

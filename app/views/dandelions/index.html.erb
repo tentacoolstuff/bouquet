@@ -1,0 +1,71 @@
+<!-- 
+- map view of all Dandelions 
+- Title 
+- Navigation 
+- Listing all Dandelions (list + grid)
+	- Sensor name
+	- Humidity
+	- Air temp
+	- Mois 1 2 3
+	- Soil temp 1 2 3
+ -->
+<!-- test code ignore  -->
+
+<!-- titles -->
+<ul class="list-view-header">
+	<li class="header-sensor">Sensor</li>
+	<li class="header-air-temp">Air Temp</li>
+	<li class="header-soil-temp">Soil Temp<br>
+		<span>Level 1</span>
+		<span>Level 2</span>
+		<span>Level 3</span>
+	</li>
+	<li class="header-humidity">Humidity</li>
+	<li class="header-moisture">Moisture<br>
+		<span>Level 1</span>
+		<span>Level 2</span>
+		<span>Level 3</span>
+	</li>
+</ul>
+<!-- content -->
+<ul class="dandelion-listing">
+	<% i = 1 %>
+		<% @reports.each do |report| %>
+		<%= link_to dandelion_path(@dandelions[i-1]) do %>
+			<li class="dandelion-listing-item">		
+				<ul>
+					<h3 class="sensor">Dandelion<span>#<%= i %></span></h3>
+					<li class="air-temp">
+						<p>21<span>&nbsp;</span></p>
+						<h4>Humidity</h4>
+					</li>
+					<li class="soil-temp multiple-list">
+						<p><%= report.temperature1 %><span>Level 1</span></p>
+						<p><%= report.temperature2 %><span>Level 2</span></p>
+						<p><%= report.temperature3 %><span>Level 3</span></p>
+						
+						<h4>Soil Temp</h4>
+					</li>
+					<li class="humidity">
+						<p><%= report.humidity %> <span>&nbsp;</span></p>
+						<h4>Humidity</h4>
+					</li>
+					<li class="moisture multiple-list">
+						<p><%= report.moisture1 %> <span>Level 1</span></p>
+						<p><%= report.moisture2 %> <span>Level 2</span></p>
+						<p><%= report.moisture3 %> <span>Level 3</span></p>
+						
+						<h4>Moisture</h4>
+					</li>
+				</ul>
+			</li>
+			<% i += 1 %>
+		<% end %>	
+	<% end %>
+</ul>
+
+
+
+
+
+

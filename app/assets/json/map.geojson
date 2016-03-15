@@ -1,0 +1,304 @@
+eqfeed_callback({
+	"type": "FeatureCollection",
+	"features": [{
+		"type": "Feature",
+		"properties": {
+			"type": "sensor",
+			"id": "001",
+			"title": "Dandelion-1",
+			"battery": "90",
+			"temp1": "21.0",
+			"temp2": "20.3",
+			"temp3": "19.9",
+			"mois1": "54.6",
+			"mois2": "50.4",
+			"mois3": "52.3",
+			"humidity": "41",
+			"airtemp": "21.2"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-119.70619440078734, 36.86992235606034]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"type": "sensor",
+			"id": "002",
+			"title": "Dandelion-2",
+			"battery": "90",
+			"temp1": "23.0",
+			"temp2": "22.3",
+			"temp3": "21.9",
+			"mois1": "52.5",
+			"mois2": "52.6",
+			"mois3": "50.3",
+			"humidity": "45",
+			"airtemp": "21.5"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-119.70502495765685, 36.86974211146022]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"type": "sensor",
+			"id": "003",
+			"title": "Dandelion-3",
+			"battery": "91",
+			"temp1": "21.2",
+			"temp2": "20.2",
+			"temp3": "20.9",
+			"mois1": "51.6",
+			"mois2": "50.2",
+			"mois3": "51.3",
+			"humidity": "42",
+			"airtemp": "22.3"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-119.70374822616577, 36.86981077611993]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"type": "sensor",
+			"id": "004",
+			"title": "Dandelion-4",
+			"battery": "90",
+			"temp1": "21.2",
+			"temp2": "21.9",
+			"temp3": "20.3",
+			"mois1": "52.2",
+			"mois2": "51.2",
+			"mois3": "52.3",
+			"humidity": "41",
+			"airtemp": "21.3"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-119.70304012298584, 36.86961336505691]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"type": "sensor",
+			"id": "005",
+			"title": "Dandelion-5",
+			"battery": "89",
+			"temp1": "21.2",
+			"temp2": "20.3",
+			"temp3": "20.1",
+			"mois1": "52.9",
+			"mois2": "50.8",
+			"mois3": "51.5",
+			"humidity": "40",
+			"airtemp": "21.6"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-119.70255732536316, 36.868789382937756]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"type": "sensor",
+			"id": "006",
+			"title": "Dandelion-6",
+			"battery": "90",
+			"temp1": "21.0",
+			"temp2": "20.3",
+			"temp3": "19.9",
+			"mois1": "54.6",
+			"mois2": "51.4",
+			"mois3": "52.8",
+			"humidity": "44",
+			"airtemp": "22.0"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-119.70335125923157, 36.867836642533966]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"type": "sensor",
+			"id": "007",
+			"title": "Dandelion-7",
+			"battery": "88",
+			"temp1": "22.0",
+			"temp2": "23.2",
+			"temp3": "19.8",
+			"mois1": "54.7",
+			"mois2": "50.3",
+			"mois3": "52.9",
+			"humidity": "44",
+			"airtemp": "21.4"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-119.70263242721558, 36.86711564189829]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"type": "sensor",
+			"id": "008",
+			"title": "Dandelion-8",
+			"battery": "92",
+			"temp1": "21.3",
+			"temp2": "20.6",
+			"temp3": "20.2",
+			"mois1": "54.1",
+			"mois2": "50.2",
+			"mois3": "52.1",
+			"humidity": "39",
+			"airtemp": "21.6"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-119.70435976982117, 36.868918130729696]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"type": "sensor",
+			"id": "009",
+			"title": "Dandelion-9",
+			"battery": "91",
+			"temp1": "20.9",
+			"temp2": "20.2",
+			"temp3": "19.5",
+			"mois1": "54.2",
+			"mois2": "50.1",
+			"mois3": "52.1",
+			"humidity": "37",
+			"airtemp": "21.2"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-119.70552921295166, 36.868961046612135]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"type": "sensor",
+			"id": "010",
+			"title": "Dandelion-10",
+			"battery": "90",
+			"temp1": "21.0",
+			"temp2": "20.3",
+			"temp3": "19.9",
+			"mois1": "54.6",
+			"mois2": "50.4",
+			"mois3": "52.3",
+			"humidity": "41",
+			"airtemp": "21.2"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-119.706130027771, 36.86806839129328]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"type": "sensor",
+			"id": "011",
+			"title": "Dandelion-11",
+			"battery": "89",
+			"temp1": "20.8",
+			"temp2": "20.1",
+			"temp3": "19.8",
+			"mois1": "54.4",
+			"mois2": "50.2",
+			"mois3": "52.6",
+			"humidity": "40",
+			"airtemp": "21.4"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-119.70493912696837, 36.867828059233084]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"type": "sensor",
+			"id": "012",
+			"title": "Dandelion-12",
+			"battery": "90",
+			"temp1": "20.0",
+			"temp2": "20.2",
+			"temp3": "21.1",
+			"mois1": "54.6",
+			"mois2": "50.4",
+			"mois3": "52.3",
+			"humidity": "39",
+			"airtemp": "21.4"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-119.70419883728027, 36.866935390676225]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"type": "sensor",
+			"id": "013",
+			"title": "Dandelion-13",
+			"battery": "92",
+			"temp1": "21.3",
+			"temp2": "20.4",
+			"temp3": "21.0",
+			"mois1": "54.1",
+			"mois2": "50.1",
+			"mois3": "52.7",
+			"humidity": "44",
+			"airtemp": "21.0"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-119.70348000526428, 36.86886663163894]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"type": "sensor",
+			"id": "014",
+			"title": "Dandelion-14",
+			"battery": "89",
+			"temp1": "20.3",
+			"temp2": "20.4",
+			"temp3": "20.1",
+			"mois1": "54.6",
+			"mois2": "50.2",
+			"mois3": "52.3",
+			"humidity": "41",
+			"airtemp": "21.2"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-119.70329761505126, 36.86690105706191]
+		}
+	}, {
+		"type": "Feature",
+		"properties": {
+			"type": "sensor",
+			"id": "015",
+			"title": "Dandelion-15",
+			"battery": "91",
+			"temp1": "21.0",
+			"temp2": "20.3",
+			"temp3": "18.9",
+			"mois1": "54.1",
+			"mois2": "50.1",
+			"mois3": "49.8",
+			"humidity": "39",
+			"airtemp": "21.0"
+		},
+		"geometry": {
+			"type": "Point",
+			"coordinates": [-119.70219254493713, 36.86800830834911]
+		}
+	}]
+});
