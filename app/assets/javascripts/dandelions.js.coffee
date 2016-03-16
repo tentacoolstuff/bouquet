@@ -2,11 +2,13 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+
 ready = ->
 	url = window.location.href
 	console.log(url)
 	id = url.split('/').reverse()
 	num = 15
+	heatmapState = false
 	
 	$('#toggle-daily').on 'click', ->
 		console.log('clicked on daily')
@@ -36,9 +38,10 @@ ready = ->
 	#show markers on hover 
 
 	$('.dandelion-listing-item').hover ->
-		hideMessages()
-		op = $('.dandelion-listing-item').index(this)
-		showMessage(markerList[op],op)
+		if !heatmapState
+			hideMessages()
+			op = $('.dandelion-listing-item').index(this)
+			showMessage(markerList[op],op)
 
 	$('.data-nav-li').on 'click', ->
 		$('.data-nav-li	').removeClass('active')
@@ -46,10 +49,12 @@ ready = ->
 		if $(this).hasClass('menu-heatmap')
 			showHeatMap()
 			hideMarkers()
+			hideMessages()
+			heatmapState = true
 		else
 			hideHeatMap()
-			showMarkers()
-
+			showMarkers()			
+			heatmapState = false
 
 	initViz(id[0],num)
 

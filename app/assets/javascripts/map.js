@@ -121,7 +121,6 @@ function attachMessage(marker, info,i) {
     content: info
   });
   infoWindowList.push(infowindow);
-  console.log('infolist '+infoWindowList);
   marker.addListener('mouseover', function(){
     infowindow.open(marker.get('map'), marker);
     $('.dandelion-listing-item').eq(i).addClass('highlights');
@@ -174,9 +173,8 @@ function setHeatmap(dData){
       },async:false
     });
     avgMois = (parseFloat(hMois0[i])+parseFloat(hMois1[i])+parseFloat(hMois2[i]))/2;
-    //heatmapData.push({location: new google.maps.LatLng('+hLati[i]+','+hLongi[i]+'), weight: '+avgMois+'});
     heatmapData.push({location: new google.maps.LatLng(hLati[i],hLongi[i]), weight: avgMois});
-    console.log(avgMois);
+
   }
   return heatmapData;
 } 
