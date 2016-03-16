@@ -8,6 +8,7 @@ var temp;
 var heatmap;
 var ajaxData;
 var markerList = new Array();
+var hoverState;
 var gradient = [
   'rgba(225, 210, 0, 0)',
   'rgba(225, 210, 0, 1)',
@@ -83,7 +84,7 @@ function loadMarkers(data){
     markerList[i]=marker;
     z = i+1;
     popup = "Dandelion #" + z;
-    attachMessage(marker, popup);
+    attachMessage(marker, popup,i);
   }
 }
 
@@ -114,13 +115,25 @@ function showMarkers(){
 } 
 
 
-function attachMessage(marker, info) {
+function attachMessage(marker, info,i) {
   var infowindow = new google.maps.InfoWindow({
     content: info
   });
-
+  marker.addListener('click', function(){
+    infowindow.open(marker.get('map'), marker);
+  });
   marker.addListener('mouseover', function(){
     infowindow.open(marker.get('map'), marker);
+    $('.dandelion-listing-item').eq(i).addClass('highlights');
+    hoverState = true;
+  });
+  marker.addListener('mouseout', function(){
+    if(hoverState){
+      infowindow.close();
+      $('.dandelion-listing-item').eq(i).removeClass('highlights');
+      hoverState = false;
+    }
+     
   });
 
 
