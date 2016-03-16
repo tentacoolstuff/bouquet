@@ -8,6 +8,7 @@ var temp;
 var heatmap;
 var ajaxData;
 var markerList = new Array();
+var infoWindowList = new Array();
 var hoverState;
 var gradient = [
   'rgba(225, 210, 0, 0)',
@@ -99,7 +100,7 @@ function loadMarker(data,x){
     });
     popup = "Dandelion " + x;
     attachMessage(marker, popup);
-    showMessage(marker, popup);
+    showMessage(marker, x-1);
 }
 
 function hideMarkers(){
@@ -119,9 +120,8 @@ function attachMessage(marker, info,i) {
   var infowindow = new google.maps.InfoWindow({
     content: info
   });
-  marker.addListener('click', function(){
-    infowindow.open(marker.get('map'), marker);
-  });
+  infoWindowList.push(infowindow);
+  console.log('infolist '+infoWindowList);
   marker.addListener('mouseover', function(){
     infowindow.open(marker.get('map'), marker);
     $('.dandelion-listing-item').eq(i).addClass('highlights');
@@ -139,11 +139,15 @@ function attachMessage(marker, info,i) {
 
 }
 
-function showMessage(marker, info){
-  var infowindow = new google.maps.InfoWindow({
-    content: info
-  });
-  infowindow.open(marker.get('map'), marker);
+function showMessage(marker, x){
+  infoWindowList[x].open(marker.get('map'), marker);
+}
+
+function hideMessages(){
+  for (x in infoWindowList){
+    infoWindowList[x].close();
+  }
+  
 }
 function setHeatmap(dData){
   var hLati = new Array();

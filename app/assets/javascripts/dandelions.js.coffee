@@ -35,9 +35,10 @@ ready = ->
 
 	#show markers on hover 
 
-	$('.dandelion-listing-item').hover( 
-		-> console.log('hovered')
-		)
+	$('.dandelion-listing-item').hover ->
+		hideMessages()
+		op = $('.dandelion-listing-item').index(this)
+		showMessage(markerList[op],op)
 
 	$('.data-nav-li').on 'click', ->
 		$('.data-nav-li	').removeClass('active')
@@ -48,6 +49,7 @@ ready = ->
 		else
 			hideHeatMap()
 			showMarkers()
+
 
 	initViz(id[0],num)
 
