@@ -7,22 +7,22 @@ ready = ->
 	url = window.location.href
 	console.log(url)
 	id = url.split('/').reverse()
-	num = 15
+	num = 14
 	heatmapState = false
 	
 	$('#toggle-daily').on 'click', ->
 		console.log('clicked on daily')
-		num = 10;
+		num = 72;
 		initViz(id[0],num)
 
 	$('#toggle-weekly').on 'click', ->
 		console.log('clicked on weekly')
-		num = 4;
+		num = 7;
 		initViz(id[0],num)
 
 	$('#toggle-monthly').on 'click', ->
 		console.log('clicked on monthly')
-		num = 1;
+		num = 30;
 		initViz(id[0],num)
 
 	$('#toggle-grid').on 'click', ->

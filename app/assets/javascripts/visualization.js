@@ -16,6 +16,7 @@ function initViz(id,num){
         url: "/dandelions/"+id,
         success: function(data){
             //humidity
+            console.log(data);
             var hLabels = humidityData.labels;
             var hData = humidityData.datasets[0].data;
             //soil temp
@@ -69,6 +70,8 @@ function initViz(id,num){
     function updateHumidityData(data,hData,hLabels,num){
         hLabels.length = num;
         hData.length = num;
+        console.log('num is'+ num);
+        console.log('data length is '+data.length);
         for (var i = 0; i < num; i++){
             z = i + 1;
             hLabels[i] = z;

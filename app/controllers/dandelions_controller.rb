@@ -7,7 +7,7 @@ class DandelionsController < ApplicationController
     $i = 0
 
     while $i < @dandelions.length do
-       @reports[$i] = Report.where(dandelionid: @dandelions[$i].id).last
+     @reports[$i] = Report.where(dandelionid: @dandelions[$i].id).last
        @reports[$i].moisture1 = '%.1f' % @reports[$i].moisture1
        @reports[$i].moisture2 = '%.1f' % @reports[$i].moisture2
        @reports[$i].moisture3 = '%.1f' % @reports[$i].moisture3
@@ -25,7 +25,7 @@ class DandelionsController < ApplicationController
     @dandelions = Dandelion.all
 	 #@dandelion = Dandelion.find('983d3578-3178-42fb-964f-fd57af189242')
     @dandelion = Dandelion.find(params[:id])
-	  @reports = Report.where(dandelionid: params[:id]).last(24)
+	  @reports = Report.where(dandelionid: params[:id]).last(72)
     @lastReport = Report.where(dandelionid: params[:id]).last
     
     respond_to do |format|

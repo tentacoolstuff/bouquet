@@ -17,32 +17,68 @@ sub main {
 	
 	# connect
 	my $dbh = DBI->connect("DBI:Pg:dbname=postgres;host=localhost", "postgres", "autom8", {'RaiseError' => 1});
-	my $d = 8;
-	my $h = 0;
-	my $m = 0;
+	my $d = 8; #date
+	my $h = 0; #hour
+	my $m = 0; #min 
 	
+	#clear previous reports 
 	$dbh->do('DELETE from reports');
 	$dbh->do('DELETE from valve_reports');
 	
-	# create initial values
-	my $time = 'January ' . $d . ' ' . $h . ':' . $m . ':00 2015 EST';
+	# create initial values (15 reports )
+	my $time = localtime;
 	my $rm = rand(0.6) +0.4;
-	$Reports[0] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
+
+	$Reports[0] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.43	,t1 => 200,batteryLv => 99,
 		Reporttime => $time, dand => 'e4590694-8275-4494-b486-f8cebfb85dad', state => '1' );
 	$rm = rand(0.6) +0.4;
-	$Reports[1] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
+	$Reports[1] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.42,t1 => 300,batteryLv => 99,
 		Reporttime => $time, dand => 'b7ea29b3-c229-4f57-960d-ad1f673a5ee2', state => '1' );
 	$rm = rand(0.6) +0.4;
 	$Reports[2] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
 		Reporttime => $time, dand => '983d3578-3178-42fb-964f-fd57af189242', state => '1' );
-	$rm = rand(0.6) +0.4;
+		$rm = rand(0.6) +0.4;
 	$Reports[3] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
 		Reporttime => $time, dand => 'f922478c-416c-43f2-ab00-68af13e18c5a', state => '1' );
 		$rm = rand(0.6) +0.4;
 	$Reports[4] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
 		Reporttime => $time, dand => 'a58fdf58-697c-40c2-9666-8dc127a8679f', state => '1' );
+		$rm = rand(0.6) +0.4;
+	$Reports[5] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.43	,t1 => 200,batteryLv => 99,
+		Reporttime => $time, dand => 'f927470a-496c-43f9-cb10-18af13e18c5a', state => '1' );
+		$rm = rand(0.6) +0.4;
+	$Reports[6] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.42,t1 => 300,batteryLv => 99,
+		Reporttime => $time, dand => 'f927470a-497c-43f9-cb10-18af13e18c5a', state => '1' );
+		$rm = rand(0.6) +0.4;
+
+
+
+	$Reports[7] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
+		Reporttime => $time, dand => 'a927470a-497c-43f9-cb10-28af13e18c5a', state => '1' );
+		$rm = rand(0.6) +0.4;
+	$Reports[8] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
+		Reporttime => $time, dand => 'b927470a-497d-43f9-cb10-18af13e18c5a', state => '1' );
+		$rm = rand(0.6) +0.4;
+	$Reports[9] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
+		Reporttime => $time, dand => 'c927470a-497d-53f9-cb10-18af13e18c5a', state => '1' );
+		$rm = rand(0.6) +0.4;
+	$Reports[10] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.43	,t1 => 200,batteryLv => 99,
+		Reporttime => $time, dand => 'd937470a-497d-53f9-cb10-18af13e18c5a', state => '1' );
+		$rm = rand(0.6) +0.4;
+	$Reports[11] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.42,t1 => 300,batteryLv => 99,
+		Reporttime => $time, dand => 'e937470a-497d-54f9-cb10-18af13e18c5a', state => '1' );
+		$rm = rand(0.6) +0.4;
+	$Reports[12] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
+		Reporttime => $time, dand => 'f937471a-497d-54f9-cb10-18af13e18c5a', state => '1' );
+		$rm = rand(0.6) +0.4;
+	$Reports[13] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
+		Reporttime => $time, dand => 'a937472a-497d-54f9-cb10-18af13e18c5a', state => '1' );
+		$rm = rand(0.6) +0.4;
+	$Reports[14] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
+		Reporttime => $time, dand => 'b937571a-497d-54f9-cb10-18af13e18c5b', state => '1' );
+		$rm = rand(0.6) +0.4;
 	
-	my $j=4;
+	my $j=6;
 	my $rm1;
 	my $rm2;
 	my $watersneeded = 0;
@@ -53,16 +89,13 @@ sub main {
 	$nvReport = new vReport;
 	
 	for (my $i=1; $i < $reps; $i++) {
-   		($d, $h, $m) = nextTime($d, $h, $m);
-   		my $time = 'January ' . $d . ' ' . $h . ':' . $m . ':00 2015 EST';
-   		
    		$j = $j + 1;
    		($rm, $watersneeded) = dry($Reports[$j-5]->m1, 1);
    		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
 			Reporttime => $time, dand => 'e4590694-8275-4494-b486-f8cebfb85dad', state => '1' );
 		if ($watersneeded == 1){
-			($td, $th, $tm) = nextTime($d, $h, $m);
-			my $ntime = 'January ' . $d . ' ' . $h . ':' . $m . ':00 2015 EST';
+			#($td, $th, $tm) = nextTime($d, $h, $m);
+			my $ntime = localtime;
 			$nvReport = vReport->new ( valve => ['2','n','d','c'], vReporttime => $ntime, vstate => 2);
 			push @vReports, $nvReport;
 			$watersneeded = 0;
@@ -73,8 +106,7 @@ sub main {
    		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
 			Reporttime => $time, dand => 'b7ea29b3-c229-4f57-960d-ad1f673a5ee2', state => '1' );
 		if ($watersneeded == 1){
-			($td, $th, $tm) = nextTime($d, $h, $m);
-			my $ntime = 'January ' . $d . ' ' . $h . ':' . $m . ':00 2015 EST';
+			my $ntime = localtime;
 			$nvReport = vReport->new ( valve => ['f','i','r','s','t','c'], vReporttime => $ntime, vstate => 2);
 			push @vReports, $nvReport;
 			$watersneeded = 0;
@@ -85,8 +117,7 @@ sub main {
    		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
 			Reporttime => $time, dand => '983d3578-3178-42fb-964f-fd57af189242', state => '1' );
 		if ($watersneeded == 1){
-			($td, $th, $tm) = nextTime($d, $h, $m);
-			my $ntime = 'January ' . $d . ' ' . $h . ':' . $m . ':00 2015 EST';
+			my $ntime = localtime;
 			$nvReport = vReport->new ( valve => ['f','i','r','s','t','p'], vReporttime => $ntime, vstate => 2);
 			push @vReports, $nvReport;
 			$watersneeded = 0;
@@ -97,8 +128,7 @@ sub main {
    		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
 			Reporttime => $time, dand => 'f922478c-416c-43f2-ab00-68af13e18c5a', state => '1' );
 		if ($watersneeded == 1){
-			($td, $th, $tm) = nextTime($d, $h, $m);
-			my $ntime = 'January ' . $d . ' ' . $h . ':' . $m . ':00 2015 EST';
+			my $ntime = localtime;
 			$nvReport = vReport->new ( valve => ['f','i','r','s','t','p'], vReporttime => $ntime, vstate => 2);
 			push @vReports, $nvReport;
 			$watersneeded = 0;
@@ -109,8 +139,120 @@ sub main {
    		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
 			Reporttime => $time, dand => 'a58fdf58-697c-40c2-9666-8dc127a8679f', state => '1' );
 		if ($watersneeded == 1){
-			($td, $th, $tm) = nextTime($d, $h, $m);
-			my $ntime = 'January ' . $d . ' ' . $h . ':' . $m . ':00 2015 EST';
+			my $ntime = localtime;
+			$nvReport = vReport->new ( valve => ['s','e','c','o','n','d','p'], vReporttime => $ntime, vstate => 2);
+			push @vReports, $nvReport;
+			$watersneeded = 0;
+		}
+
+		$j = $j + 1;
+		($rm, $watersneeded) = dry($Reports[$j-5]->m1, 2);
+   		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
+			Reporttime => $time, dand => 'f927470a-496c-43f9-cb10-18af13e18c5a', state => '1' );
+		if ($watersneeded == 1){
+			my $ntime = localtime;
+			$nvReport = vReport->new ( valve => ['s','e','c','o','n','d','p'], vReporttime => $ntime, vstate => 2);
+			push @vReports, $nvReport;
+			$watersneeded = 0;
+		}
+
+		$j = $j + 1;
+		($rm, $watersneeded) = dry($Reports[$j-5]->m1, 2);
+   		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
+			Reporttime => $time, dand => 'f927470a-497c-43f9-cb10-18af13e18c5a', state => '1' );
+		if ($watersneeded == 1){
+			my $ntime = localtime;
+			$nvReport = vReport->new ( valve => ['s','e','c','o','n','d','p'], vReporttime => $ntime, vstate => 2);
+			push @vReports, $nvReport;
+			$watersneeded = 0;
+		}
+
+
+
+		#new
+		$j = $j + 1;
+		($rm, $watersneeded) = dry($Reports[$j-5]->m1, 2);
+   		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
+			Reporttime => $time, dand => 'a927470a-497c-43f9-cb10-28af13e18c5a', state => '1' );
+		if ($watersneeded == 1){
+			my $ntime = localtime;
+			$nvReport = vReport->new ( valve => ['s','e','c','o','n','d','p'], vReporttime => $ntime, vstate => 2);
+			push @vReports, $nvReport;
+			$watersneeded = 0;
+		}
+
+		$j = $j + 1;
+		($rm, $watersneeded) = dry($Reports[$j-5]->m1, 2);
+   		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
+			Reporttime => $time, dand => 'b927470a-497d-43f9-cb10-18af13e18c5a', state => '1' );
+		if ($watersneeded == 1){
+			my $ntime = localtime;
+			$nvReport = vReport->new ( valve => ['s','e','c','o','n','d','p'], vReporttime => $ntime, vstate => 2);
+			push @vReports, $nvReport;
+			$watersneeded = 0;
+		}
+
+		$j = $j + 1;
+		($rm, $watersneeded) = dry($Reports[$j-5]->m1, 2);
+   		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
+			Reporttime => $time, dand => 'c927470a-497d-53f9-cb10-18af13e18c5a', state => '1' );
+		if ($watersneeded == 1){
+			my $ntime = localtime;
+			$nvReport = vReport->new ( valve => ['s','e','c','o','n','d','p'], vReporttime => $ntime, vstate => 2);
+			push @vReports, $nvReport;
+			$watersneeded = 0;
+		}
+
+		$j = $j + 1;
+		($rm, $watersneeded) = dry($Reports[$j-5]->m1, 2);
+   		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
+			Reporttime => $time, dand => 'd937470a-497d-53f9-cb10-18af13e18c5a', state => '1' );
+		if ($watersneeded == 1){
+			my $ntime = localtime;
+			$nvReport = vReport->new ( valve => ['s','e','c','o','n','d','p'], vReporttime => $ntime, vstate => 2);
+			push @vReports, $nvReport;
+			$watersneeded = 0;
+		}
+
+		$j = $j + 1;
+		($rm, $watersneeded) = dry($Reports[$j-5]->m1, 2);
+   		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
+			Reporttime => $time, dand => 'e937470a-497d-54f9-cb10-18af13e18c5a', state => '1' );
+		if ($watersneeded == 1){
+			my $ntime = localtime;
+			$nvReport = vReport->new ( valve => ['s','e','c','o','n','d','p'], vReporttime => $ntime, vstate => 2);
+			push @vReports, $nvReport;
+			$watersneeded = 0;
+		}
+
+		$j = $j + 1;
+		($rm, $watersneeded) = dry($Reports[$j-5]->m1, 2);
+   		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
+			Reporttime => $time, dand => 'f937471a-497d-54f9-cb10-18af13e18c5a', state => '1' );
+		if ($watersneeded == 1){
+			my $ntime = localtime;
+			$nvReport = vReport->new ( valve => ['s','e','c','o','n','d','p'], vReporttime => $ntime, vstate => 2);
+			push @vReports, $nvReport;
+			$watersneeded = 0;
+		}
+
+		$j = $j + 1;
+		($rm, $watersneeded) = dry($Reports[$j-5]->m1, 2);
+   		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
+			Reporttime => $time, dand => 'a937472a-497d-54f9-cb10-18af13e18c5a', state => '1' );
+		if ($watersneeded == 1){
+			my $ntime = localtime;
+			$nvReport = vReport->new ( valve => ['s','e','c','o','n','d','p'], vReporttime => $ntime, vstate => 2);
+			push @vReports, $nvReport;
+			$watersneeded = 0;
+		}
+
+		$j = $j + 1;
+		($rm, $watersneeded) = dry($Reports[$j-5]->m1, 2);
+   		$Reports[$j] = Report->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.4,t1 => 300,batteryLv => 99,
+			Reporttime => $time, dand => 'b937571a-497d-54f9-cb10-18af13e18c5b', state => '1' );
+		if ($watersneeded == 1){
+			my $ntime = localtime;
 			$nvReport = vReport->new ( valve => ['s','e','c','o','n','d','p'], vReporttime => $ntime, vstate => 2);
 			push @vReports, $nvReport;
 			$watersneeded = 0;
@@ -219,7 +361,7 @@ sub dry {
 		}
 		elsif ($mm > 0.716667308)
 		{
-			$mm = 0.678314963 + rand(0.716667308 -0.678314963);
+			$mm = 0.678314963 + rand(0.716667308 - 0.678314963);
 		}
 		elsif ($mm > 0.678314963)
 		{
