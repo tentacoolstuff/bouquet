@@ -1,63 +1,85 @@
-<!-- individual data view -->
-<div class="indiv-sensor-data">
-	<ul class="device-metadata">
-		<h3 class="sensor">Device Metadata</h3>
-		<li class="sensor-img">
-			<img src="/assets/sensor-thumb.png">
-		</li>
-		<li class="battery">
-			<p><%= @lastReport.batterylevel %></p>
-			<h4>Battery</h4>
-		</li>
-		<li class="altitude">
-			<p><%= @dandelion.alti %>m</p>
-			<h4>Altitude</h4>
-		</li>
-		<li class="firmware-version">
-			<p><%= @dandelion.vFirmware %> </p>
-			<h4>Firmware Ver.</h4>
-		</li>
-		<li class="moisture-limit">
-			<p><%= @dandelion.moistureLimit %> </p>
-			<h4>Mois. Limit</h4>
-		</li>
-		<li class="longtitude">
-			<p><%= @dandelion.longi %></p>
-			<h4>Longitude</h4>
-		</li>
-		<li class="latitude">
-			<p><%= @dandelion.lati %> </p>
-			<h4>Latitude</h4>
-		</li>
-	</ul>	
-	<div class="moisture-trend">
-		<h3 class="sensor">Mositure Level Trend</h3>
-		<h4>Measured in % overtime for each level</h4>
-		<ul class="legend">
-			<li><div class="legend-circle"></div><p>Level 1</p></li>
-			<li><div class="legend-circle"></div><p>Level 2</p></li>
-			<li><div class="legend-circle"></div><p>Level 3</p></li>
-		</ul>
+<section class="data-wrapper right"> 		
+	<div class="data-content">
+		<div class="content-wrapper">
+			<!-- indiv header -->
+			<div class="data-content-header" id="indiv-sensor">
+				<h2>Sensor: Dandelion <span><% @dandelion.nickname %></span></h2>
+				<div class="content-divider"></div>
+				<ul class="data-toggle">
+  					<li id="toggle-daily" class="active">Daily</li>
+  					<li id="toggle-weekly">Weekly</li>
+  					<li id="toggle-monthly">Monthly</li>
+				</ul>
+			</div>
+				<!-- <div class="return">Back</div> -->
 
-		<div class="moisture-table" id="moisTable">
-		</div>			
-	</div>
-	<div class="humidity-trend">
-		<h3 class="sensor">Humidity Trend</h3>
-		<h4>Measured in % overtime for each level</h4>
-		
-		<canvas id="humidity-chart"></canvas>
+			<%= link_to image_tag("chevron-left.svg", :border=>0), {:controller => 'dandelions'}, {:class => 'return'} %>
 
-	</div>
-	<div class="soil-temp-trend">
-		<h3 class="sensor">Soil Temperature Trend</h3>
-		<h4>Measured in % overtime for each level</h4>
-		<ul class="legend">
-			<li><div class="legend-circle"></div><p>Level 1</p></li>
-			<li><div class="legend-circle"></div><p>Level 2</p></li>
-			<li><div class="legend-circle"></div><p>Level 3</p></li>
-		</ul>
-		<canvas id="soil-temp-chart"></canvas>
+				
+			<!-- individual data view -->
+			<div class="indiv-sensor-data">
+				<ul class="device-metadata">
+					<h3 class="sensor">Device Metadata</h3>
+					<li class="sensor-img">
+						<img src="/assets/sensor-thumb.png">
+					</li>
+					<li class="battery">
+						<p><%= @lastReport.batterylevel %></p>
+						<h4>Battery</h4>
+					</li>
+					<li class="altitude">
+						<p><%= @dandelion.alti %>m</p>
+						<h4>Altitude</h4>
+					</li>
+					<li class="firmware-version">
+						<p><%= @dandelion.vFirmware %> </p>
+						<h4>Firmware Ver.</h4>
+					</li>
+					<li class="moisture-limit">
+						<p><%= @dandelion.moistureLimit %> </p>
+						<h4>Mois. Limit</h4>
+					</li>
+					<li class="longtitude">
+						<p><%= @dandelion.longi %></p>
+						<h4>Longitude</h4>
+					</li>
+					<li class="latitude">
+						<p><%= @dandelion.lati %> </p>
+						<h4>Latitude</h4>
+					</li>
+				</ul>	
+				<div class="moisture-trend">
+					<h3 class="sensor">Mositure Level Trend</h3>
+					<h4>Measured in % overtime for each level</h4>
+					<ul class="legend">
+						<li><div class="legend-circle"></div><p>Level 1</p></li>
+						<li><div class="legend-circle"></div><p>Level 2</p></li>
+						<li><div class="legend-circle"></div><p>Level 3</p></li>
+					</ul>
 
+					<div class="moisture-table" id="moisTable">
+					</div>			
+				</div>
+				<div class="humidity-trend">
+					<h3 class="sensor">Humidity Trend</h3>
+					<h4>Measured in % overtime for each level</h4>
+					
+					<canvas id="humidity-chart"></canvas>
+
+				</div>
+				<div class="soil-temp-trend">
+					<h3 class="sensor">Soil Temperature Trend</h3>
+					<h4>Measured in % overtime for each level</h4>
+					<ul class="legend">
+						<li><div class="legend-circle"></div><p>Level 1</p></li>
+						<li><div class="legend-circle"></div><p>Level 2</p></li>
+						<li><div class="legend-circle"></div><p>Level 3</p></li>
+					</ul>
+					<canvas id="soil-temp-chart"></canvas>
+
+				</div>
+			</div>
+			
+		</div>
 	</div>
-</div>
+</section>

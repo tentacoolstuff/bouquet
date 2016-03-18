@@ -51,13 +51,17 @@ ready = ->
 			hideMarkers()
 			hideMessages()
 			heatmapState = true
+		else if $(this).hasClass('menu-irrigation')
+			window.location.href = 'http://localhost:3000/dandelions/irrigation'
 		else
+			window.location.href = 'http://localhost:3000/dandelions'
 			hideHeatMap()
 			showMarkers()			
 			heatmapState = false
 
-	$('#aButton').on 'click', ->
-		buttonPressed()
+
+	$('.aButton').on 'click', ->
+		buttonPressed(this)
 
 	initViz(id[0],num)
 

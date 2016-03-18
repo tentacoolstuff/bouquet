@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   
-  resources :dandelions
-
-  resources :sunflowers do
+  resources :dandelions do
     get :openValve, on: :collection
     get :closeValve, on: :collection
   end

@@ -234,19 +234,22 @@ function initViz(id,num){
     };    
 }
 
-function buttonPressed(){
+function buttonPressed(item){
     console.log('valve clicked');
     if (!valveState){
         valveState = true;
-        $.ajax("/sunflowers/openValve");
+        $.ajax("/dandelions/openValve");
         console.log('Opening valve');
+        $(item).text('Irrigating').addClass('aButtonStyle');
+
     }else{
-        $.ajax("/sunflowers/closeValve");
+        $.ajax("/dandelions/closeValve");
         valveState = false;
         console.log('Closing valve');
-    }
-        
+        $(item).text('Irrigate');
+        $(item).text('Irrigate').removeClass('aButtonStyle');
 
+    }
 }
     
 
