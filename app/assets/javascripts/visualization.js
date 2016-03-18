@@ -234,19 +234,40 @@ function initViz(id,num){
     };    
 }
 
-function buttonPressed(){
-    console.log('valve clicked');
+function buttonPressed(item){
+    
+    var dandPos = $(item).parent().parent().parent().index('.dandelion-listing-item');
+    var irrigationStatus = ['No action needed', 'Irrigation in progress', 'Irrigation needed'];
+    //var irrigationStarted = 
+    var valveID = dandPos%4;
+    console.log('valveID is ' + valveID);
     if (!valveState){
         valveState = true;
-        $.ajax("/sunflowers/openValve");
+        $.ajax({
+            url:"/dandelions/openValve",
+            data: {valveID: valveID},
+            dataType: 'script'
+        });
+        $.ajax("/dandelions/openValve");
         console.log('Opening valve');
+        $(item).text('Irrigating').addClass('aButtonStyle');
+        $(item).parent().parent().find('.irrigation-action').text(irrigationStatus[1]);
+
     }else{
-        $.ajax("/sunflowers/closeValve");
+        $.ajax({
+            url:"/dandelions/closeValve",
+            data: {valveID: valveID},
+            dataType: 'script'
+        });
         valveState = false;
         console.log('Closing valve');
-    }
+        $(item).text('Irrigate');
+        $(item).text('Irrigate').removeClass('aButtonStyle');
+        $(item).parent().parent().find('.irrigation-action').text(irrigationStatus[0]);
         
 
+
+    }
 }
     
 
