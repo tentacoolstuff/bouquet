@@ -31,52 +31,52 @@ sub main {
 	my $time = '2016-03-'.$d .' '. $h .':'. $m .':00-05';
 	my $rm = rand(0.6) +0.4;
 
-	$Reports[0] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.55,t1 => 303,batteryLv => 99,
+	$Reports[0] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.75,t1 => 303,batteryLv => 99,
 		Reporttime => $time, dand => 'e4590694-8275-4494-b486-f8cebfb85dad', state => '1' );
 	$rm = rand(0.6) +0.4;
-	$Reports[1] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.55,t1 => 303,batteryLv => 99,
+	$Reports[1] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.75,t1 => 303,batteryLv => 99,
 		Reporttime => $time, dand => 'b7ea29b3-c229-4f57-960d-ad1f673a5ee2', state => '1' );
 	$rm = rand(0.6) +0.4;
-	$Reports[2] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.55,t1 => 303,batteryLv => 99,
+	$Reports[2] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.75,t1 => 303,batteryLv => 99,
 		Reporttime => $time, dand => '983d3578-3178-42fb-964f-fd57af189242', state => '1' );
 		$rm = rand(0.6) +0.4;
-	$Reports[3] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.55,t1 => 303,batteryLv => 99,
+	$Reports[3] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.75,t1 => 303,batteryLv => 99,
 		Reporttime => $time, dand => 'f922478c-416c-43f2-ab00-68af13e18c5a', state => '1' );
 		$rm = rand(0.6) +0.4;
-	$Reports[4] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.55,t1 => 303,batteryLv => 99,
+	$Reports[4] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.75,t1 => 303,batteryLv => 99,
 		Reporttime => $time, dand => 'a58fdf58-697c-40c2-9666-8dc127a8679f', state => '1' );
 		$rm = rand(0.6) +0.4;
-	$Reports[5] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.55,t1 => 303,batteryLv => 99,
+	$Reports[5] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.75,t1 => 303,batteryLv => 99,
 		Reporttime => $time, dand => 'f927470a-496c-43f9-cb10-18af13e18c5a', state => '1' );
 		$rm = rand(0.6) +0.4;
-	$Reports[6] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.55,t1 => 303,batteryLv => 99,
+	$Reports[6] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.75,t1 => 303,batteryLv => 99,
 		Reporttime => $time, dand => 'f927470a-497c-43f9-cb10-18af13e18c5a', state => '1' );
 		$rm = rand(0.6) +0.4;
 
 
 
-	$Reports[7] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.55,t1 => 303,batteryLv => 99,
+	$Reports[7] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.75,t1 => 303,batteryLv => 99,
 		Reporttime => $time, dand => 'a927470a-497c-43f9-cb10-28af13e18c5a', state => '1' );
 		$rm = rand(0.6) +0.4;
-	$Reports[8] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.55,t1 => 303,batteryLv => 99,
+	$Reports[8] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.75,t1 => 303,batteryLv => 99,
 		Reporttime => $time, dand => 'b927470a-497d-43f9-cb10-18af13e18c5a', state => '1' );
 		$rm = rand(0.6) +0.4;
-	$Reports[9] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.55,t1 => 303,batteryLv => 99,
+	$Reports[9] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.75,t1 => 303,batteryLv => 99,
 		Reporttime => $time, dand => 'c927470a-497d-53f9-cb10-18af13e18c5a', state => '1' );
 		$rm = rand(0.6) +0.4;
-	$Reports[10] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.55,t1 => 303,batteryLv => 99,
+	$Reports[10] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.75,t1 => 303,batteryLv => 99,
 		Reporttime => $time, dand => 'd937470a-497d-53f9-cb10-18af13e18c5a', state => '1' );
 		$rm = rand(0.6) +0.4;
-	$Reports[11] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.55,t1 => 303,batteryLv => 99,
+	$Reports[11] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.75,t1 => 303,batteryLv => 99,
 		Reporttime => $time, dand => 'e937470a-497d-54f9-cb10-18af13e18c5a', state => '1' );
 		$rm = rand(0.6) +0.4;
-	$Reports[12] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.55,t1 => 303,batteryLv => 99,
+	$Reports[12] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.75,t1 => 303,batteryLv => 99,
 		Reporttime => $time, dand => 'f937471a-497d-54f9-cb10-18af13e18c5a', state => '1' );
 		$rm = rand(0.6) +0.4;
-	$Reports[13] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.55,t1 => 303,batteryLv => 99,
+	$Reports[13] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.75,t1 => 303,batteryLv => 99,
 		Reporttime => $time, dand => 'a937472a-497d-54f9-cb10-18af13e18c5a', state => '1' );
 		$rm = rand(0.6) +0.4;
-	$Reports[14] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.55,t1 => 303,batteryLv => 99,
+	$Reports[14] = Report ->new( m1 => $rm, m2 => $rm, m3 => $rm,hum => 0.75,t1 => 303,batteryLv => 99,
 		Reporttime => $time, dand => 'b937571a-497d-54f9-cb10-18af13e18c5b', state => '1' );
 		$rm = rand(0.6) +0.4;
 	
@@ -88,10 +88,10 @@ sub main {
 	my $watersneeded = 0;
 	$nvReport = new vReport;
 	
-	for (my $i=1; $i < $reps - j; $i++) {
+	for (my $i=1; $i < $reps; $i++) {
    		#shift time up by 10 minutes for next round of reports
 		($d, $h, $m) = nextTime($d, $h, $m);
-		($hum, $t1) = dailyCurve($oh, $om);
+		($hum, $t1) = dailyCurve($h, $m);
 		my $time = '2016-03-'.$d .' '. $h .':'. $m .':00-05';
 		
 		$j = $j + 1;
@@ -476,12 +476,12 @@ sub nextTime {
 sub dailyCurve {
 	my ($oh, $om)= @_;
 	my $xi = ($om/10) + $oh*6;
-	my $tvar = (int(rand(20)) - 9)/20;
-	my $hvar = (int(rand(20)) - 9)/20;
+	my $tvar = (int(rand(20)) - 9)/200;
+	my $hvar = (int(rand(20)) - 9)/200;
 	
-	$te = int(22 + 8*cos($xi*pi*2/144));
+	$te = int(22 + 8*cos(($xi - 96)*pi*2/144)) +273;
+	$hu = 0.55 + 0.2*cos(($xi - 96)*pi*2/144);
 	
-	$hu = 0.55 + 0.2*cos($xi*pi*2/144);
 	$hu = $hu*(1+$hvar);
 	
 	return ($hu, $te);
