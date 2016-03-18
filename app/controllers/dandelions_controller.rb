@@ -11,6 +11,7 @@ class DandelionsController < ApplicationController
        @reports[$i].moisture1 = '%.2f' % @reports[$i].moisture1
        @reports[$i].moisture2 = '%.2f' % @reports[$i].moisture2
        @reports[$i].moisture3 = '%.2f' % @reports[$i].moisture3
+       @reports[$i].humidity  = '%.3f' % @reports[$i].humidity
        $i +=1
     end
 

@@ -4,7 +4,10 @@
 			<!-- indiv header -->
 			<div class="data-content-header" >
 				<h2>Irrigation Information</h2>
+				<div class="content-divider"></div>
+
 			</div>
+
 				<div class="dandelion-data list-view" id="dandelion-view">
 
 					<!-- titles -->
@@ -29,11 +32,20 @@
 										<h4>Moisture</h4>
 									</li>
 									<li class="humidity">
-										<p> <%= @dandelions[i-1].moistureLimit %>  <span>&nbsp;</span></p>
+										<p> <%= @dandelions[i-1].moistureLimit %></p>
 										<h4>Moisture Limit</h4>
 									</li>
 									<li class="irrigation-action">No Action Needed</li>
 									<li><button class="aButton">Irrigate</button></li>
+									<li class="irrigation-expand"><img src="/assets/chevron-down.svg"></li>
+								</ul>
+
+								<ul class="irrigation-details" style="display: none">
+								<h2>Details</h2>
+								<li>Soil temperate is 20 degrees </li>
+								<li>Soil temperate is 20 degrees </li>
+								<li>Soil temperate is 20 degrees </li>
+								<li>Regular irrigation should be conducted in an hour </li>
 								</ul>
 							</li>
 							<% i += 1 %>
