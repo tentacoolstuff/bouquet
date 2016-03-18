@@ -340,7 +340,7 @@ sub dry {
 		elsif ($mm < 0.21087771)
 		{
 			$waterneeded = 1;
-			$mm = 0.736035532 + rand(1 - 0.736035532);
+			$mm = 0.536035532 + rand(1 - 0.736035532);
 		}
 	}
 	else {
@@ -447,7 +447,7 @@ sub dry {
 		elsif ($mm < 0.202271677)
 		{
 			$waterneeded = 1;
-			$mm = 0.757188118 + rand(1 - 0.757188118);
+			$mm = 0.557188118 + rand(1 - 0.757188118);
 		}
 	} 
 	$mm = $mm + 0.2;
@@ -477,7 +477,7 @@ sub dailyCurve {
 	my ($oh, $om)= @_;
 	my $xi = ($om/10) + $oh*6;
 	my $tvar = (int(rand(20)) - 9)/200;
-	my $hvar = (int(rand(20)) - 9)/200;
+	my $hvar = (rand(20) - 9)/200;
 	
 	$te = int(22 + 8*cos(($xi - 96)*pi*2/144)) +273;
 	$hu = 0.55 + 0.2*cos(($xi - 96)*pi*2/144);
