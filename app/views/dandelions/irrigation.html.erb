@@ -1,59 +1,58 @@
 <section class="data-wrapper right"> 		
-	<div class="data-content">
-		<div class="content-wrapper">
-			<!-- indiv header -->
-			<div class="data-content-header" >
-				<h2>Irrigation Information</h2>
-				<div class="content-divider"></div>
+<div class="data-content">
+<div class="content-wrapper">
+	<!-- indiv header -->
+	<div class="data-content-header" >
+		<h2>Irrigation Information</h2>
+		<div class="content-divider"></div>
 
-			</div>
-
-				<div class="dandelion-data list-view" id="dandelion-view">
-
-					<!-- titles -->
-					<ul class="list-view-header">
-						<li class="header-sensor">Sensor</li>
-
-						<li class="header-moisture-level">Moisture Level</li>
-						<li class="header-air-temp">Moisture Limit</li>
-						<li class="header-action">Action</li>
-						<li class="header-air-temp">Control</li>
-					</ul>
-
-					<!-- content -->
-					<ul class="dandelion-listing">
-						<% i = 1 %>
-						<% @allReports.each do |report| %>
-							<li class="dandelion-listing-item" id="irrigation-listing">		
-								<ul>
-									<h3 class="sensor">Dandelion<span>#<%= i %></span></h3>
-									<li class="moisture" id="irrigation-moisture">
-										<p><%= report.moisture1 %></p>
-										<h4>Moisture</h4>
-									</li>
-									<li class="humidity">
-										<p> <%= @dandelions[i-1].moistureLimit %></p>
-										<h4>Moisture Limit</h4>
-									</li>
-									<li class="irrigation-action">No Action Needed</li>
-									<li><button class="aButton">Irrigate</button></li>
-									<li class="irrigation-expand"><img src="/assets/chevron-down.svg"></li>
-								</ul>
-
-								<ul class="irrigation-details" style="display: none">
-								<h2>Details</h2>
-								<li>Soil temperate is 20 degrees </li>
-								<li>Soil temperate is 20 degrees </li>
-								<li>Soil temperate is 20 degrees </li>
-								<li>Regular irrigation should be conducted in an hour </li>
-								</ul>
-							</li>
-							<% i += 1 %>
-						<% end %>
-					</ul>
-				</div>
-			</div>	
-
-		</div>
 	</div>
+
+	<div class="dandelion-data list-view" id="dandelion-view">
+
+		<!-- titles -->
+		<ul class="list-view-header">
+			<li class="header-sensor">Sensor</li>
+
+			<li class="header-moisture-level">Moisture Level</li>
+			<li class="header-air-temp">Moisture Limit</li>
+			<li class="header-action">Action</li>
+			<li class="header-air-temp">Control</li>
+		</ul>
+
+		<!-- content -->
+		<ul class="dandelion-listing">
+			<% i = 1 %>
+			<% @allReports.each do |report| %>
+				<li class="dandelion-listing-item" id="irrigation-listing">		
+					<ul>
+						<h3 class="sensor">Dandelion<span>#<%= i %></span></h3>
+						<li class="moisture" id="irrigation-moisture">
+							<p><%= report.moisture1 %></p>
+							<h4>Moisture</h4>
+						</li>
+						<li class="humidity">
+							<p> <%= @dandelions[i-1].moistureLimit %></p>
+							<h4>Moisture Limit</h4>
+						</li>
+						<li class="irrigation-action"><%= @irrigationStatus[i-1] %></li>
+						<li class="irrigation-button"><button class="aButton">Irrigate</button></li>
+						<li class="irrigation-expand"><img src="/assets/chevron-down.svg"></li>
+					</ul>
+
+					<ul class="irrigation-details" style="display: none">
+					<h2>Details</h2>
+					<li>Soil temperate is <span><%= report.temperature1 %> degrees </span></li>
+					<li>Moisture level is  <span><%= @moistureStatus[i-1] %></span></li>
+					<li>Humidity is  <span><%= @humidityStatus[i-1] %> </span></li>
+					<li>Irrigation <span><%= @wateringTime[i-1] %></span></li>
+					</ul>
+				</li>
+				<% i += 1 %>
+			<% end %>
+		</ul>
+	</div>	
+
+</div>
+</div>
 </section>

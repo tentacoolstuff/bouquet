@@ -68,10 +68,6 @@ ready = ->
 		else
 			$(this).removeClass('expand-rotation')
 			$(this).parent().parent().find('.irrigation-details').fadeOut();
-
-		
-
-
 	initViz(id[0],num)
 
 

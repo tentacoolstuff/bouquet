@@ -124,6 +124,9 @@ ul.legend{
     color: white;
     border: 2px solid #4798FA;
 }
+.irrigation-button{
+    width: 75px;
+}
 .irrigation-expand{
         margin-left: 30px;
     img{
@@ -152,5 +155,10 @@ ul.legend{
         font-size: 13px;
         display: block; 
         width: 100%;
+        span{
+            font-weight: bold;
+            color: #4798FA;
+            text-decoration: underline;
+        }
     }
 }
