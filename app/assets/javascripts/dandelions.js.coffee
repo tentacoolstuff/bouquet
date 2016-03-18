@@ -56,6 +56,9 @@ ready = ->
 			showMarkers()			
 			heatmapState = false
 
+	$('#aButton').on 'click', ->
+		buttonPressed()
+
 	initViz(id[0],num)
 
 

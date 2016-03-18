@@ -32,7 +32,6 @@ class DandelionsController < ApplicationController
       format.html { render layout: "individual" }
       format.json { render json: @reports }
     end
-   
   end
   
   private
