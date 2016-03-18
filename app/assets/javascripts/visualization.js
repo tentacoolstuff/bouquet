@@ -7,6 +7,7 @@ var chartsRendered = false;
 var humidityChart;
 var soilTempChart;
 var chartWidth;
+var valveState = false;
 
 //pretty visuals 
 function initViz(id,num){
@@ -233,7 +234,21 @@ function initViz(id,num){
     };    
 }
 
+function buttonPressed(){
+    console.log('valve clicked');
+    if (!valveState){
+        valveState = true;
+        $.ajax("/sunflowers/openValve");
+        console.log('Opening valve');
+    }else{
+        $.ajax("/sunflowers/closeValve");
+        valveState = false;
+        console.log('Closing valve');
+    }
+        
 
+}
+    
 
 
 
